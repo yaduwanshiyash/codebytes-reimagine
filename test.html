@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursor with Hover Effect</title>
+    <style>
+        body {
+            cursor: none; /* Hide the default cursor */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            background: #f0f0f0; /* Set a background color or image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #page92 {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        #page92 div {
+            height: 200px;
+            width: 200px;
+            background-color: cornsilk;
+            border-radius: 50%;
+            transition: all ease 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        #page92 div:hover {
+            height: 250px;
+            width: 250px;
+            background-color: cornsilk;
+            border-radius: 50%;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .cursor-point,
+        .cursor-circle {
+            position: absolute;
+            pointer-events: none; /* Prevent cursor from interacting with elements */
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        .cursor-point {
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            border-radius: 50%;
+            transition: transform 0.2s ease-out;
+        }
+
+        .cursor-circle {
+            width: 30px;
+            height: 30px;
+            border: 2px dashed black;
+            border-radius: 50%;
+            transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+            z-index: 999;
+        }
+
+        .smooth {
+            width: 40px;
+            height: 40px;
+            border-color: gray;
+        }
+
+        .rotating {
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Hover me</button>
+    <div id="page92">
+        <div>Hover over me</div>
+    </div>
+    <div class="cursor-point"></div>
+    <div class="cursor-circle"></div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursorCircle = document.querySelector('.cursor-circle');
+
+            const pointX = e.clientX;
+            const pointY = e.clientY;
+
+            cursorCircle.style.left = `${pointX}px`;
+            cursorCircle.style.top = `${pointY}px`;
+
+            moveCursorPoint(pointX, pointY);
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.querySelector('.cursor-circle').classList.add('smooth');
+        });
+
+        document.addEventListener('mouseup', () => {
+            document.querySelector('.cursor-circle').classList.remove('smooth');
+        });
+
+        document.querySelector('.button').addEventListener('mouseover', () => {
+            document.querySelector('.cursor-circle').classList.add('rotating');
+        });
+
+        document.querySelector('.button').addEventListener('mouseout', () => {
+            document.querySelector('.cursor-circle').classList.remove('rotating');
+        });
+
+        let cursorPoint = document.querySelector('.cursor-point');
+        let mouseX = 0, mouseY = 0;
+        let pointX = 0, pointY = 0;
+        const delay = 0.1;
+
+        function moveCursorPoint(x, y) {
+            mouseX = x;
+            mouseY = y;
+        }
+
+        function animate() {
+            pointX += (mouseX - pointX) * delay;
+            pointY += (mouseY - pointY) * delay;
+
+            cursorPoint.style.left = `${pointX}px`;
+            cursorPoint.style.top = `${pointY}px`;
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
