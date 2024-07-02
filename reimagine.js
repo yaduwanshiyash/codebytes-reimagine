@@ -123,6 +123,7 @@ function page3() {
             scroller: ".main",
             end: "bottom top",
             pin: true,
+            scrub:true,
             pinSpacing: false
         }
     }
@@ -135,13 +136,12 @@ function page3() {
             start: "top bottom",
             scroller: ".main",
             end: "bottom top",
-            scrub: true
+            scrub: true,
             // markers: true
         },
-        y: 100
-
-
+        y: 100,
     });
+
     gsap.from(" #divh1 h1, #divp p", {
         y: 200,
         duration: 1,
@@ -387,3 +387,60 @@ function animate() {
 }
 
 animate();
+
+
+
+
+
+
+function myFunction() {
+    document.querySelector(".drop").style.opacity = "1";
+    document.querySelector(".drop").style.display = "block";
+    document.querySelector(".drop").style.pointerEvents = "all";
+      document.querySelector(".menu-btn").style.display = "none";
+      document.querySelector(".close").style.display = "block";
+      document.querySelector(".close").style.opacity = "1";
+      gsap.to(".drop",{
+        transform: 'translateY(0%)',
+        duration:1,
+        opacity:1,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      })
+    }
+  
+  
+  
+    function myFunction2() {
+      document.querySelector(".drop").style.display = "none";
+        document.querySelector(".menu-btn").style.display = "block";
+        document.querySelector(".close").style.display = "none";
+      document.querySelector(".drop").style.opacity = "0";
+      document.querySelector(".close").style.opacity = "0";
+      gsap.to(".drop",{
+        transform: 'translateY(-150%)',
+        duration:2,
+        opacity:0,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      })
+    }
+
+
+    
+const body = document.querySelector("body")
+const navbar = document.getElementById("nav");
+
+body.addEventListener("wheel",function(dets){
+  if(dets.deltaY > 0){
+    gsap.to(navbar,{
+      transform: 'translateY(-30vw)',
+      duration:2,
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    })
+  }else{
+    gsap.to(navbar,{
+      transform: 'translateY(0%)',
+      duration:1,
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    })
+  }
+})
