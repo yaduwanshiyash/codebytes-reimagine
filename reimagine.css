@@ -86,37 +86,6 @@ body {
    text-decoration: none;
   
   }
-  /* .drop{
-    display: none;
-    z-index: 9;
-    opacity: 0;
-    pointer-events: none;
-    height: 90vh;
-    width: 50vw;
-    background-color: rgba(0, 0, 0, 0.823);
-    position: absolute;
-    transform: translateX(80%);
-    border-radius: 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10vw;
-    padding: 2vw 3vw;
-    margin-top: 2vw;
-  }
-  .drop a{
-    font-size: 8vw !important;
-    position: relative;
-    text-decoration: none;
-    margin-bottom: 8vw;
-    font-weight: 900;
-    display: block;
-    top: 30%;
-    text-align: center;
-    color: #fff !important;
-    font-weight: 500 !important;
-  
-  } */
   
   .menu-btn{
     opacity: 0;
@@ -577,7 +546,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 #page4 {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--teriary-color);
     display: flex;
     align-items: center;
