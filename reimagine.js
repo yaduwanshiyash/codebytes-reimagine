@@ -123,6 +123,7 @@ function page3() {
             scroller: ".main",
             end: "bottom top",
             pin: true,
+            scrub:true,
             pinSpacing: false
         }
     }
@@ -135,13 +136,12 @@ function page3() {
             start: "top bottom",
             scroller: ".main",
             end: "bottom top",
-            scrub: true
+            scrub: true,
             // markers: true
         },
-        y: 100
-
-
+        y: 100,
     });
+
     gsap.from(" #divh1 h1, #divp p", {
         y: 200,
         duration: 1,
@@ -387,3 +387,5 @@ function animate() {
 }
 
 animate();
+
+

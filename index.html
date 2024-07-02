@@ -15,6 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="reimagine.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body >
@@ -166,11 +168,18 @@
                     <h1>explore</h1>
                 </div>
                 <div id="divp">
-                    <p>National Geographic explores the urgent issue of global warming, documenting its impacts on ecosystems, weather patterns, and communities worldwide. Through science, education, and advocacy, we aim to raise awareness, inspire action, and mitigate the effects of climate change for a sustainable future</p>
+                    <p>National Geographic explores the urgent issue of global warming, documenting its impacts on
+                        ecosystems, weather patterns, and communities worldwide. Through science, education, and
+                        advocacy, we aim to raise awareness, inspire action, and mitigate the effects of climate change
+                        for a sustainable future</p>
                 </div>
             </div>
-            <video muted loop autoplay
-                src="https://daisheng.com.tw/wp-content/themes/daisheng/assets/video/mv_movie.mp4"></video>
+            <div class="img">
+                <video muted loop autoplay
+                    src="https://videos.pexels.com/video-files/6981418/6981418-hd_1920_1080_25fps.mp4"></video>
+                <div class="overlay-img"></div>
+            </div>
+
         </div>
         <div id="collect">
             <div id="page4">
@@ -183,6 +192,9 @@
                 <div id="page42">
                     <h1>Monarch</h1>
                     <p>National Geographic's  <br> exploration unveils the lion's  <br>dominance, social intricacies, <br>and conservation challenges, highlighting <br>  its critical role in ecosystems.</p>
+                    <a class="box__link button-animation" id="page51button" href="#">
+                        Know More
+                    </a>
                 </div>
 
             </div>
@@ -192,6 +204,9 @@
                     <p>National Geographic delves into the <br> world of these iconic mammals, <br>exploring their habitats, <br>behaviors, and conservation challenges,  <br> howcasing their role as keystone species in  <br>  diverse ecosystems.
 
                     </p>
+                    <a class="box__link button-animation" id="page51button" href="#">
+                        Know More
+                    </a>
                 </div>
                 <div id="page52" class="image-container">
                  <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D#" alt="">
@@ -215,19 +230,53 @@
                 <div id="page62">
                     <div id="key1" class="key">
                         <img src="https://origin-sire-media.fichub.com/ng_za/card-image/690991.1200x675.webp" alt="">
-                        <div class="overlay"></div>
+                        <div class="overlay">
+                            <div class="overly-details">
+                                <h5>NATIONAL GEOGRAPHIC</h5>
+                                <p> TO CATCH A SMUGGLER</p>
+                                <h6>THURSDAYS AT 19:00 FROM 13 JUNE</h6>
+                            </div>
+                        </div>
                     </div>
                     <div id="key2" class="key">
-                        <img src="https://origin-sire-media.fichub.com/ng_za/serie-main/597240.1024x576.webp" alt="">
+                        <img src="https://origin-sire-media.fichub.com/ng_za/serie-main/624826.1200x675.webp" alt="">
+                        <div class="overlay">
+                            <div class="overly-details">
+                                <h5>NATIONAL GEOGRAPHIC</h5>
+                                <p> RESTAURANTS AT THE END OF THE WORLD</p>
+                                <h6>SUNDAY 19:10 CAT</h6>
+                            </div>
+                        </div>
                     </div>
                     <div id="key3" class="key">
                         <img src="https://origin-sire-media.fichub.com/ng_za/card-image/690988.1200x675.webp" alt="">
+                        <div class="overlay">
+                            <div class="overly-details">
+                                <h5>NATIONAL GEOGRAPHIC WILD</h5>
+                                <p> WILD, SMART AND DEADLY</p>
+                                <h6>WEDNESDAYS FROM 18:00, FROM 5 JUNE</h6>
+                            </div>
+                        </div>
                     </div>
                     <div id="key4" class="key">
-                        <img src="https://origin-sire-media.fichub.com/generic/clip-main/691684.1024x576.webp" alt="">
+                        <img src="https://origin-sire-media.fichub.com/ng_za/serie-main/688703.1024x576.webp" alt="">
+                        <div class="overlay">
+                            <div class="overly-details">
+                                <h5>NATIONAL GEOGRAPHIC WILD</h5>
+                                <p> SECRETS OF THE WHALES (YR 1 EPS 1-4)</p>
+                                <h6>SUNDAY 19:35 CAT</h6>
+                            </div>
+                        </div>
                     </div>
                     <div id="key5" class="key">
-                        <img src="https://origin-sire-media.fichub.com/ng_za/serie-main/554869.1200x675.webp" alt="">
+                        <img src="https://origin-sire-media.fichub.com/generic/clip-main/503749.1024x576.webp" alt="">
+                        <div class="overlay">
+                            <div class="overly-details">
+                                <h5>NATIONAL GEOGRAPHIC WILD</h5>
+                                <p> PROMO</p>
+                                <h6>SEASON 9 SNAKES IN THE CITY</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -252,6 +301,28 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="travel h-screen w-full">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://www.nationalgeographic.com/content/dam/expeditions/destinations/asia/land/Bhutan-Land-of-Mysticism-Mythology/bhutan-mysticism-mythology-hero.jpg.adapt.nineteen-hundred.jpg" alt="Travel Image 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://www.nationalgeographic.com/content/dam/expeditions/destinations/europe/land/Greece-Wonders-of-an-Ancient-Empire/hero-greece-ancient-wonders-2019.jpg.adapt.nineteen-hundred.jpg" alt="Travel Image 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://www.nationalgeographic.com/content/dam/expeditions/destinations/asia/land/China-Imperial-Treasures-and-Natural-Wonders/Hero-china-imperial-treasures-an-wonders.jpg.adapt.nineteen-hundred.jpg" alt="Travel Image 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://www.nationalgeographic.com/content/dam/expeditions/destinations/north-america/land/Canadian-Rockies-by-Rail-and-Trail/Hero-canadians-rockies-train.jpg.adapt.nineteen-hundred.jpg" alt="Travel Image 3">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+            
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div> -->
             <div id="page8">
                 <h1>also check this</h1>
                 <div  id="page81">
@@ -347,7 +418,25 @@
 
     </div>
 
-
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -356,6 +445,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="reimagine.js"></script>
 </body>
 
