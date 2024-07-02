@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="reimagine.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 </head>
 
 <body >
-    <div id="nav">
+    <!-- <div id="nav">
         <div id="nav1"><img src="./image-removebg-preview (4).png" alt=""></div>
         <div id="nav2">
             <p>HOME</p>
@@ -31,8 +32,52 @@
             <i class="ri-search-line"></i>
             <i class="ri-user-3-fill"></i>
         </div>
-    </div>
+    </div> -->
 
+    <div class="colorline"></div>
+
+    <nav>
+        <div id="nav">
+            <div id="nav-left">
+            <img src="./image-removebg-preview (4).png" alt="" srcset="">
+            </div>
+            <div id="nav-right">
+                <a class="res" href="#">HOME</a>
+                <a class="res" href="#">ANIMALS</a>
+                <a class="res" href="#">ENVIRONMENT</a>
+                <a class="res" href="#">HISTORY</a>
+                <a class="res" href="#">TRAVEL</a>
+                <div id="menu">
+                    <button onclick="myFunction()" class="menu-btn"><i class="ri-menu-line menu-btn"></i></button>
+                <div class="drop">
+                    <button onclick="myFunction2()" class="close"><i class="ri-close-line"></i></button>
+                    <div class="dropin">
+                        <div class="drop-left">
+                            <img src="./image-removebg-preview (4).png" alt="" srcset="">
+                            <div class="social-link">
+                                <a href="#"><i class="ri-telegram-fill"></i></a>
+                                <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                                <a href="#"><i class="ri-instagram-fill"></i></a>
+                                <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                                <a href="#"><i class="ri-youtube-fill"></i></a>
+                                <a href="#"><i class="ri-mail-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="drop-right">
+                            <a href="#">HOME</a>
+                            <a href="#">ANIMALS</a>
+                            <a href="#">ENVIRONMENT</a>
+                            <a href="#">HISTORY</a>
+                            <a href="#">TRAVEL</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- <button>Login</button> -->
+            </div>
+        </div>
+    </nav>
+    
     <div class="cursor-point"></div>
     <div class="cursor-circle"></div>
 
