@@ -1,4 +1,19 @@
 @media (max-width: 768px) {
+
+  #page1{
+    width: 100vw;
+    height: 50vw;
+    position: relative;
+  }  
+
+  #con h1{
+    font-size: 8vw;
+  }
+  
+  #con p{
+    font-size: 3vw;
+  }
+
     #page2{
         display: none;
     }
@@ -204,20 +219,54 @@
 
 
 #page7 {
-    width: 100%;
+    width: 100vw;
+    height: 50vw;
 }
+.b1{
+    width: 50vh;
+    height: 60vh;
+    /* object-fit:cover; */
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#page7 h1 {
+    font-size: 5vh;
+}
+
+#page71 {
+    width: 100vw;
+    height: 20vw;
+}
+
+#box711 {
+    height: 35vw;
+ width: 100vw;
+ /* background-color: azure; */
+ flex-direction: column;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 20px;
+}
+
 #page8 {
-    height: 100vh;
-    width: 100%;
+    /* height: 100vh; */
+    width: 100vw;
     flex-direction: column;
     display: flex;
     justify-content: center;
-    padding-left:20px;
+    padding-left: 5vw;
+}
+
+#page8 h1 {
+    font-size: 5vh;
 }
 
 #page81 {
-    height: 85%;
-    width: 90%;
+    height: 70vh;
+    width: 100vw;
     /* background-color: cornflowerblue; */
     flex-direction: column;
     display: flex;
@@ -225,9 +274,14 @@
     position: relative;
 }
 
+#circle8{
+    height: 50vw;
+    width: 50vw;
+}
+
 #page9 {
-    height: 100vh;
-    width: 100%;
+    /* height: 100vh; */
+    width: 100vw;
     /* background-color: rgb(189, 132, 107); */
     flex-direction: column;
     display: flex;
@@ -237,29 +291,26 @@
 }
 
 #page92 {
-    height: 100%;
-    width: 100%;
+    margin: 10vw;
+    height: 90vw;
+    width: 100vw;
     /* background-color: chartreuse; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap: 5vw;
     align-items: center;
     justify-content: space-between;
 
 }
 #page92 div {
-    height: 800px;
-    width: 200px;
+    height: 40vw;
+    width: 40vw;
     background-color: cornsilk;
     border-radius: 50%;
     transition: all ease 0.5s;
 }
-#page92 div:hover {
-    height: 800px;
-    width: 200px;
-    background-color: cornsilk;
-    border-radius: 50%;
-}
+
 
 #page9 h1 {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -267,7 +318,14 @@
 }
 #page9 p{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2.5vw;
+    font-size: 1.5vh;
+    width: 100vw;
+    margin: 2vw;
+}
+
+.video-container{
+    height: 50vh;
+    width: 50vw;
 }
 
 

@@ -656,7 +656,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #page7 {
-    height: 100vh;
+    /* height: 100vw; */
     width: 100vw;
     /* background-color: darkkhaki; */
     flex-direction: column;
@@ -664,6 +664,9 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: space-around;
 }
+
+
+
 
 #page8 {
     height: 100vh;
@@ -689,8 +692,8 @@ font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
 }
 .b1{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vw;
     /* object-fit:cover; */
     background-position:center;
     background-size: cover;
@@ -698,14 +701,14 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #page71 {
-    height: 80%;
-    width: 80%;
+    /* height: 40vw; */
+    width: 80vw;
     display: flex;
 }
 
 #box711 {
-    height: 100%;
-    width: 50%;
+       height: 35vw;
+    width: 100vw;
     /* background-color: azure; */
     flex-direction: column;
     display: flex;
@@ -715,8 +718,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #box712 {
-    height: 100%;
-    width: 50%;
+    height: 35vw;
+    width: 100vw;
     /* background-color: rgb(192, 106, 246); */
     flex-direction: column;
     display: flex;
@@ -724,7 +727,7 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
 }
 #page7 > h1{
-    font-size: 60px;
+    font-size: 5vw;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -1137,7 +1140,7 @@ animation: slide 0.5s backwards infinite;
     bottom: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     
 .card {
     min-width: 65vw;
