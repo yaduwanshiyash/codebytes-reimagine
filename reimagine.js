@@ -115,19 +115,21 @@ function page3() {
     //     pin: true,
     //     pinSpacing: false
     // });
-    gsap.to("#page3", {
-        scaleX: 1.3,
-        scrollTrigger: {
-            trigger: "#page3",
-            start: "top top",
-            scroller: ".main",
-            end: "bottom top",
-            pin: true,
-            scrub:true,
-            pinSpacing: false
-        }
-    }
-    )
+
+
+    // gsap.to("#page3", {
+    //     scaleX: 1.1,
+    //     scrollTrigger: {
+    //         trigger: "#page3",
+    //         start: "top top",
+    //         scroller: ".main",
+    //         end: "bottom top",
+    //         pin: true,
+    //         scrub:true,
+    //         pinSpacing: false
+    //     }
+    // }
+    // )
 
     // Optional: Adding animations to other slides
     gsap.from("#collect", {
@@ -160,18 +162,40 @@ function page3() {
 }
 page3()
 
-function nav() {
-    gsap.from("#nav1 img ,#nav2 p,#nav i", {
-        y: -100,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.in",
-        stagger: 0.2
-    })
+function applyGsapAnimation() {
+    gsap.killTweensOf("#page3");
 
-
+    gsap.to("#page3", {
+        scaleX: window.innerWidth <= 768 ? 1 : 1.1, 
+        scrollTrigger: {
+            trigger: "#page3",
+            start: "top top",
+            scroller: ".main",
+            end: "bottom top",
+            pin: true,
+            scrub: true,
+            pinSpacing: false
+        }
+    });
 }
-nav()
+
+applyGsapAnimation();
+
+window.addEventListener("resize", applyGsapAnimation);
+
+
+// function nav() {
+//     gsap.from("#nav1 img ,#nav2 p,#nav i", {
+//         y: -100,
+//         opacity: 0,
+//         duration: 1.5,
+//         ease: "power2.in",
+//         stagger: 0.2
+//     })
+
+
+// }
+// nav()
 
 function page4() {
     var t1 = gsap.timeline(
@@ -444,3 +468,28 @@ body.addEventListener("wheel",function(dets){
     })
   }
 })
+
+
+
+
+
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links p');
+
+burger.addEventListener('click', () => {
+    // Toggle Nav
+    nav.classList.toggle('nav-active');
+
+    // Animate Links
+    navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+            link.style.animation = '';
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        }
+    });
+
+    // Burger Animation
+    burger.classList.toggle('toggle');
+});
