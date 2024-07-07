@@ -184,18 +184,7 @@ applyGsapAnimation();
 window.addEventListener("resize", applyGsapAnimation);
 
 
-// function nav() {
-//     gsap.from("#nav1 img ,#nav2 p,#nav i", {
-//         y: -100,
-//         opacity: 0,
-//         duration: 1.5,
-//         ease: "power2.in",
-//         stagger: 0.2
-//     })
 
-
-// }
-// nav()
 
 function page4() {
     var t1 = gsap.timeline(
@@ -375,20 +364,20 @@ document.addEventListener('mouseup', () => {
     document.querySelector('.cursor-circle').classList.remove('smooth');
 });
 
-document.querySelector('.button').addEventListener('mouseover', () => {
-    document.querySelector('.cursor-circle').classList.add('rotating');
-    document.querySelector('.cursor-circle').style.borderColor = 'white';
-    document.querySelector('.cursor-circle').style.height = '65px';
-    document.querySelector('.cursor-circle').style.width = '65px';
-});
+// document.querySelector('.button').addEventListener('mouseover', () => {
+//     document.querySelector('.cursor-circle').classList.add('rotating');
+//     document.querySelector('.cursor-circle').style.borderColor = 'white';
+//     document.querySelector('.cursor-circle').style.height = '65px';
+//     document.querySelector('.cursor-circle').style.width = '65px';
+// });
 
-document.querySelector('.button').addEventListener('mouseout', () => {
-    document.querySelector('.cursor-circle').classList.remove('rotating');
-    document.querySelector('.cursor-circle').style.borderColor = 'black';
-    document.querySelector('.cursor-circle').style.height = '60px';
-    document.querySelector('.cursor-circle').style.width = '60px';
+// document.querySelector('.button').addEventListener('mouseout', () => {
+//     document.querySelector('.cursor-circle').classList.remove('rotating');
+//     document.querySelector('.cursor-circle').style.borderColor = 'black';
+//     document.querySelector('.cursor-circle').style.height = '60px';
+//     document.querySelector('.cursor-circle').style.width = '60px';
 
-});
+// });
 
 let cursorPoint = document.querySelector('.cursor-point');
 let mouseX = 0, mouseY = 0;

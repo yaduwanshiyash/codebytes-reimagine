@@ -301,8 +301,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #p2sec2 {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,7 +317,7 @@ font-family: Arial, Helvetica, sans-serif;
 
     height: 35vh;
     width: 100vw;
-    background-image: url(https://plus.unsplash.com/premium_photo-1686899171869-4d80f6f9d315?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://i.natgeofe.com/n/9607a958-d1da-41ea-b5a8-ddefe8e4c1ae/NationalGeographic_2726179.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -326,6 +326,11 @@ height: 100%;
 width: 100%;
 object-fit: cover;
 object-position: center;
+}
+
+#p2sec2 p{
+    font-size: 1vw;
+    text-transform: uppercase;
 }
 #middlepartial h1 {
     font-size: 35px;
@@ -341,8 +346,8 @@ object-position: center;
 }
 
 #p2cir {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -414,8 +419,7 @@ object-position: center;
 
 #page3 {
     height: 100vh;
-    width: 100vw;
-    /* background-color: rgb(184, 135, 11); */
+    width: 100%;
     position: relative;
 }
 
@@ -746,57 +750,10 @@ object-position: center;
     font-family: Arial, Helvetica, sans-serif;
 
 }
-/* 
-#nav {
-    height: 70px;
-    width: 100%;
-    background-color: #00000081;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-    display: flex;
-    position: absolute;
-    z-index: 999;
-}
-
-#nav1 {
-    display: flex;
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-}
-
-#nav2 p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#nav2 {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-
-}
-
-
-#nav1 img {
-    height: 50px;
-    width: 150px;
-}
-
-#nav2 i {
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-} */
 
 #page7 {
     height: 100vh;
     width: 100vw;
-    /* background-color: darkkhaki; */
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -806,7 +763,6 @@ object-position: center;
 #page8 {
     height: 100vh;
     width: 100vw;
-    /* background-color: rgb(189, 107, 182); */
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -816,7 +772,6 @@ object-position: center;
 #page9 {
     height: 60vh;
     width: 100vw;
-    /* background-color: rgb(189, 132, 107); */
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -829,7 +784,6 @@ object-position: center;
 .b1{
     width: 100%;
     height: 100%;
-    /* object-fit:cover; */
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -844,7 +798,6 @@ object-position: center;
 #box711 {
     height: 100%;
     width: 50%;
-    /* background-color: azure; */
     flex-direction: column;
     display: flex;
     justify-content: space-between;
@@ -855,7 +808,6 @@ object-position: center;
 #box712 {
     height: 100%;
     width: 50%;
-    /* background-color: rgb(192, 106, 246); */
     flex-direction: column;
     display: flex;
     justify-content: space-between;
@@ -895,7 +847,6 @@ object-position: center;
 #page81 {
     height: 85%;
     width: 90%;
-    /* background-color: cornflowerblue; */
     flex-direction: column;
     display: flex;
     justify-content: space-around;
@@ -966,9 +917,9 @@ object-position: center;
 }
 #page92 div:hover {
     height: 250px;
-    width: 250px;
+    width: 300px;
     background-color: cornsilk;
-    border-radius: 50%;
+    border-radius: 30px;
 }
 
 ::selection{
@@ -1427,6 +1378,22 @@ animation: slide 0.5s backwards infinite;
     width: 100%;
 }
 
+#footer1 i::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #f4b41a;
+    transition: width 0.3s ease;
+}
+#footer1 i:hover::after {
+    width: 100%;
+}
+
+
 /* Text Effects */
 .nav-links p {
     overflow: hidden;
@@ -1448,6 +1415,100 @@ animation: slide 0.5s backwards infinite;
 }
 
 .nav-links p:hover::before {
+    transform: translateY(0%);
+}
+
+
+#p2sec2 p {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+#p2sec2 p::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f4b41a;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+}
+
+#p2sec2 p:hover::before {
+    transform: translateY(0%);
+}
+
+
+#footer h1 {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+#footer h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f4b41a;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+}
+
+#footer h1:hover::before {
+    transform: translateY(0%);
+}
+
+#page42 h1 {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+#page42 h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f4b41a;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+}
+
+#page42 h1:hover::before {
+    transform: translateY(0%);
+}
+
+#page51 h1 {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+#page51 h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f4b41a;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+}
+
+#page51 h1:hover::before {
     transform: translateY(0%);
 }
 
@@ -1485,7 +1546,7 @@ animation: slide 0.5s backwards infinite;
         position: absolute;
         top: 60px;
         left: 0;
-        background: #1a1a1a;
+        background: #1a1a1ad4;
         text-align: center;
         animation: dropdown 0.5s ease forwards;
     }
